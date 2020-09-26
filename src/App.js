@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import { device } from './helpers/device';
 import colors from './helpers/colors';
+import { ProjectsSection } from './components/section';
 
 const Container = styled(Grid)`
 @media ${device.mobileS} {  
@@ -40,15 +41,12 @@ function App() {
             <Button>Get Started</Button>
           </Grid>
           <Grid item xs={12} md={5}>
-            <img style={{ width: '100%' }} alt="dev" src="https://static.dribbble.com/users/942794/screenshots/12233236/dribbble.png" />
+            <img style={{ width: '100%', maxHeight: 400, objectFit: 'contain' }} alt="dev" src="https://blush.ly/RFod4Enb6/p" />
           </Grid>
         </Container>
-
       </header>
-      <body>
-        <p>
-          Test
-        </p>
+      <body className="App-body">
+        <ProjectsSection />
       </body>
     </div>
   );
