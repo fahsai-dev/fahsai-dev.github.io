@@ -38,21 +38,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const projects = [
-  {
-    title: '11',
-    subTitle: 'dddd'
-  },
-  {
-    title: '11',
-    subTitle: 'dddd'
-  },
-  {
-    title: '11',
-    subTitle: 'dddd'
-  },
-]
-
 function ProjectsSection() {
   const [spacing, setSpacing] = React.useState(4);
   const classes = useStyles();

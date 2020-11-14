@@ -41,7 +41,7 @@ function App() {
             <Button>Get Started</Button>
           </Grid>
           <Grid item xs={12} md={5}>
-            <img style={{ width: '100%', maxHeight: 400, objectFit: 'contain' }} alt="dev" src="https://blush.ly/RFod4Enb6/p" />
+            <img style={{ width: '100%', maxHeight: 300, objectFit: 'contain' }} alt="cover" src={process.env.PUBLIC_URL + '/cover.png'} />
           </Grid>
         </Container>
       </header>
