@@ -1,16 +1,31 @@
-const projects = [
+const app = [
   {
-    title: '11',
+    title: 'app',
     subTitle: 'dddd'
   },
   {
-    title: '11',
+    title: 'app',
     subTitle: 'dddd'
   },
   {
-    title: '11',
+    title: 'app',
     subTitle: 'dddd'
   },
 ]
 
-export default projects
+const website = [
+  {
+    title: 'website',
+    subTitle: 'dddd'
+  },
+  {
+    title: 'website',
+    subTitle: 'dddd'
+  },
+  {
+    title: 'website',
+    subTitle: 'dddd'
+  },
+]
+
+export default { app, website };

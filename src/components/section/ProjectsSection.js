@@ -1,21 +1,51 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import colors from '../../helpers/colors';
 import { ProjectCard } from '../card';
+import { PROJECTS } from '../../constant';
 
 
-const Button = styled.button`
-  width: auto;
-  background-color: ${colors.primary};
-  color: white;
-  margin: 36px 0px;
-  padding: 20px 40px;
-  border-radius: 60px;
-  border-color: ${colors.primary};
-  font-size: 16px;
-`;
+const ProjectsSection = () => {
+  const spacing = 4;
+  const classes = useStyles();
+
+  const [selectedType, setSelectedType] = React.useState('all');
+  const [projectLists, setProjectLists] = React.useState([]);
+
+
+  React.useEffect(() => {
+    if (selectedType === 'all') { setProjectLists([...PROJECTS.app, ...PROJECTS.website]); }
+    if (selectedType === 'app') { setProjectLists([...PROJECTS.app]); }
+    if (selectedType === 'web') { setProjectLists([...PROJECTS.website]); }
+  }, [selectedType]);
+
+  return (
+    <div style={{ backgroundColor: colors.whiteSmoke }}>
+      <Grid container className={classes.root} spacing={spacing}>
+        <Grid item xs={12}>
+          <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
+          <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
+            <p>All | App | Web</p>
+          </div>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={spacing}>
+            {projectLists.map((item, index) => (
+              <Grid key={index} item>
+                <ProjectCard
+                  title={item.title}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
+
+    </div>
+  );
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,32 +67,5 @@ const useStyles = makeStyles((theme) => ({
     height: '10px'
   }
 }));
-
-function ProjectsSection() {
-  const [spacing, setSpacing] = React.useState(4);
-  const classes = useStyles();
-
-  return (
-    <div className="ProjectCard" style={{ backgroundColor: colors.whiteSmoke }}>
-      <Grid container className={classes.root} spacing={4}>
-        <Grid item xs={12}>
-          <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
-          <div className="font-18 weight-med" style={{ textAlign: 'center' }}>Application / Website</div>
-        </Grid>
-
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={spacing}>
-            {[0, 1, 2, 0, 1, 2].map((value) => (
-              <Grid key={value} item>
-                <ProjectCard />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid>
-
-    </div>
-  );
-}
 
 export default ProjectsSection;

@@ -30,8 +30,9 @@ const Button = styled.button`
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Container container spacing={12} style={{ alignItems: 'center' }}>
+      {/* <header className="App-header"> </header> */}
+      <body className="App-body">
+        <Container className="App-header" container spacing={12} style={{ alignItems: 'center' }}>
           <Grid item xs={12} md={7}>
             <div className="intro-text">
               <div>Hello</div>
@@ -44,8 +45,7 @@ function App() {
             <img style={{ width: '100%', maxHeight: 300, objectFit: 'contain' }} alt="cover" src={process.env.PUBLIC_URL + '/cover.png'} />
           </Grid>
         </Container>
-      </header>
-      <body className="App-body">
+
         <ProjectsSection />
       </body>
     </div>
