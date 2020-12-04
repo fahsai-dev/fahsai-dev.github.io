@@ -26,7 +26,7 @@ const ProjectsSection = () => {
         <Grid item xs={12}>
           <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
           <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
-            <p>All | App | Web</p>
+            <p>All</p>
           </div>
         </Grid>
 
@@ -36,6 +36,8 @@ const ProjectsSection = () => {
               <Grid key={index} item>
                 <ProjectCard
                   title={item.title}
+                  subtitle={item.subtitle}
+                  thumbnail={item.thumbnail}
                 />
               </Grid>
             ))}
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   border: {
     marginTop: 34,
     marginBottom: 13,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.whiteSmoke,
     width: '50px',
     height: '10px'
   }
