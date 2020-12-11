@@ -30,9 +30,8 @@ const Button = styled.button`
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header"> </header> */}
       <body className="App-body">
-        <Container className="App-header" container spacing={12} style={{ alignItems: 'center' }}>
+        <Container className="App-header" container spacing={12}>
           <Grid item xs={12} md={7}>
             <div className="intro-text">
               <div>Hello</div>
