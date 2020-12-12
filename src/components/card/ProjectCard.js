@@ -17,10 +17,10 @@ const MediaCard = (props) => {
         <CardMedia
           component="img"
           className={classes.media}
-          image={thumbnail || "https://i.pinimg.com/originals/cb/f7/74/cbf7743018d4e5b27c3266800937489e.jpg"}
+          image={thumbnail}
           title={`ProjectThumbnail_${title}`}
         />
-        <CardContent style={{ minHeight: 60 }}>
+        <CardContent style={{ minHeight: 80 }}>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
@@ -39,12 +39,12 @@ const useStyles = makeStyles({
     backgroundColor: '#424242',
     color: colors.white,
     borderRadius: 8,
-    boxShadow: `2px 10px 8px rgb(33, 33, 33, 0.1)`,
+    boxShadow: `2px 10px 14px rgb(33, 33, 33, 0.3)`,
   },
   media: {
     height: 220,
     backgroundColor: colors.white,
-    objectFit: 'contain'
+    objectFit: 'contain',
   },
 });
 

@@ -1,18 +1,11 @@
 const URL = process.env.PUBLIC_URL;
 
 const app = [
-  // {
-  //   title: 'app',
-  //   subTitle: 'dddd'
-  // },
-  // {
-  //   title: 'app',
-  //   subTitle: 'dddd'
-  // },
-  // {
-  //   title: 'app',
-  //   subTitle: 'dddd'
-  // },
+  {
+    title: 'College Advisor',
+    thumbnail: `${URL + '/screenshot/app-advisor.png'}`,
+    subtitle: 'Mobile App on iPhone Link: https://youtu.be/i0fwzywEVvc',
+  },
 ]
 
 const website = [
@@ -27,9 +20,24 @@ const website = [
     subtitle: 'Company Profile Website',
   },
   {
-    title: 'Youtube Search',
+    title: 'Master Ad Dashboard',
+    thumbnail: `${URL + '/screenshot/web-dashboard3.png'}`,
+    subtitle: 'Dashboard for overview of advertising production data',
+  },
+  {
+    title: 'Buy Ticket',
+    thumbnail: `${URL + '/screenshot/web-buyticket3.png'}`,
+    subtitle: 'C# Microsoft Visual Studio 2010',
+  },
+  {
+    title: 'Ying Ying Ying GAME',
+    thumbnail: `${URL + '/screenshot/web-yyygame3.png'}`,
+    subtitle: 'GameSalad Creator',
+  },
+  {
+    title: 'Search Video',
     thumbnail: `${URL + '/screenshot/web-findyoutube.png'}`,
-    subtitle: 'Built with react',
+    subtitle: 'React JS',
   },
 ]
 
