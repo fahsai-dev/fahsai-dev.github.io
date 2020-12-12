@@ -52,7 +52,8 @@ const ProjectsSection = () => {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingTop: 32
+    paddingTop: 32,
+    paddingBottom: 32,
   },
   paper: {
     height: 140,
