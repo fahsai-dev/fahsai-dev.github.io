@@ -29,11 +29,11 @@ const website = [
     thumbnail: `${URL + '/screenshot/web-buyticket3.png'}`,
     subtitle: 'C# Microsoft Visual Studio 2010',
   },
-  {
-    title: 'Ying Ying Ying GAME',
-    thumbnail: `${URL + '/screenshot/web-yyygame3.png'}`,
-    subtitle: 'GameSalad Creator',
-  },
+  // {
+  //   title: 'Ying Ying Ying GAME',
+  //   thumbnail: `${URL + '/screenshot/web-yyygame.png'}`,
+  //   subtitle: 'GameSalad Creator',
+  // },
   {
     title: 'Search Video',
     thumbnail: `${URL + '/screenshot/web-findyoutube.png'}`,
