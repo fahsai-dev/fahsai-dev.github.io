@@ -1,4 +1,4 @@
-const colors = {
+const color = {
   primary: "#f36d4f",
   background: "#282c34",
   black: "rgb(33, 33, 33)",
@@ -6,4 +6,4 @@ const colors = {
   whiteSmoke: "#f9f9f9",
 };
 
-export default colors;
+export default color;

@@ -2,10 +2,8 @@ import React from 'react';
 import './App.css';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
-import styled from 'styled-components';
-import colors from './helpers/colors';
 import { ProjectsSection } from './components/section';
-import { IMAGES } from './constant';
+import { IMAGES, COLOR } from './constant';
 
 function App() {
   const classes = styles();
@@ -16,7 +14,7 @@ function App() {
         <Grid item xs={12} md={7}>
           <div className="intro-text">
             <div>Hello</div>
-            <div><a className="weight-extraBold" style={{ color: colors.primary }}>I'm Fahsai</a>, Front-End </div>
+            <div><a className="weight-extraBold" style={{ color: COLOR.primary }}>I'm Fahsai</a>, Front-End </div>
             <div>Developer</div>
           </div>
           <button className={classes.Button}>Get Started</button>
@@ -47,12 +45,12 @@ const styles = makeStyles((theme) => ({
   },
   Button: {
     width: 'auto',
-    backgroundColor: colors.primary,
+    backgroundColor: COLOR.primary,
     color: 'white',
     margin: '36px 0px',
     padding: '20px 40px',
     borderRadius: 60,
-    borderColor: colors.primary,
+    borderColor: COLOR.primary,
     fontSize: 16,
   }
 }));

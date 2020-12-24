@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import colors from '../../helpers/colors';
+import { COLOR } from '../../constant';
 
 const MediaCard = (props) => {
   const { title, subtitle, thumbnail } = props;
@@ -37,13 +37,13 @@ const useStyles = makeStyles({
   root: {
     width: 345,
     backgroundColor: '#424242',
-    color: colors.white,
+    color: COLOR.white,
     borderRadius: 8,
     boxShadow: `2px 10px 14px rgb(33, 33, 33, 0.3)`,
   },
   media: {
     height: 220,
-    backgroundColor: colors.white,
+    backgroundColor: COLOR.white,
     objectFit: 'contain',
   },
 });

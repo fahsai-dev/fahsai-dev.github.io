@@ -1,9 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import colors from '../../helpers/colors';
 import { ProjectCard } from '../card';
-import { PROJECTS } from '../../constant';
+import { PROJECTS, COLOR } from '../../constant';
 
 
 const ProjectsSection = () => {
@@ -21,7 +20,7 @@ const ProjectsSection = () => {
   }, [selectedType]);
 
   return (
-    <Grid container className={classes.root} spacing={spacing} style={{ backgroundColor: colors.whiteSmoke }}>
+    <Grid container className={classes.root} spacing={spacing} style={{ backgroundColor: COLOR.whiteSmoke }}>
       <Grid item xs={12}>
         <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
         <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
@@ -62,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   border: {
     marginTop: 34,
     marginBottom: 13,
-    backgroundColor: colors.whiteSmoke,
+    backgroundColor: COLOR.whiteSmoke,
     width: '50px',
     height: '10px'
   }
