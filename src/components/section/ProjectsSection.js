@@ -21,31 +21,28 @@ const ProjectsSection = () => {
   }, [selectedType]);
 
   return (
-    <div style={{ backgroundColor: colors.whiteSmoke }}>
-      <Grid container className={classes.root} spacing={spacing}>
-        <Grid item xs={12}>
-          <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
-          <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
-            <p>All</p>
-          </div>
-        </Grid>
-
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={spacing}>
-            {projectLists.map((item, index) => (
-              <Grid key={index} item>
-                <ProjectCard
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  thumbnail={item.thumbnail}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
+    <Grid container className={classes.root} spacing={spacing} style={{ backgroundColor: colors.whiteSmoke }}>
+      <Grid item xs={12}>
+        <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
+        <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
+          <p>All</p>
+        </div>
       </Grid>
 
-    </div>
+      <Grid item xs={12}>
+        <Grid container justify="center" spacing={spacing}>
+          {projectLists.map((item, index) => (
+            <Grid key={index} item>
+              <ProjectCard
+                title={item.title}
+                subtitle={item.subtitle}
+                thumbnail={item.thumbnail}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
 
