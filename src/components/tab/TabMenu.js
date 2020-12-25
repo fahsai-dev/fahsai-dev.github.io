@@ -31,7 +31,7 @@ const TabMenu = (props) => {
         variant="scrollable"
         scrollButtons="auto"
         disableRipple
-        TabIndicatorProps={{ style: { height: "2px", backgroundColor: COLOR.primary } }}
+        TabIndicatorProps={{ style: { height: "3px", backgroundColor: COLOR.primary, borderRadius: 8 } }}
         className={classes.tabs}
       >
         {
@@ -63,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
     width: 'auto',
     padding: 0,
     marginRight: 24,
-    color: COLOR.background,
+    color: COLOR.white,
+    opacity: 1,
   },
   selected: {
     color: COLOR.primary,

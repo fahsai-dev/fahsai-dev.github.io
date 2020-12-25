@@ -1,10 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  makeStyles,
+  Box,
+} from '@material-ui/core';
 import { COLOR } from '../../constant';
 
 const MediaCard = (props) => {
@@ -21,10 +24,10 @@ const MediaCard = (props) => {
           title={`ProjectThumbnail_${title}`}
         />
         <CardContent style={{ minHeight: 80 }}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h3" component="h3">
             {title}
           </Typography>
-          <Typography variant="body2" component="p">
+          <Typography variant="body1" component="p">
             {subtitle}
           </Typography>
         </CardContent>

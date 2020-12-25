@@ -2,7 +2,11 @@ import React from 'react';
 import './App.css';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
-import { ProjectsSection } from './components/section';
+import {
+  ProjectsSection,
+  ContactSection,
+  FooterSection,
+} from './components/section';
 import { IMAGES, COLOR } from './constant';
 
 function App() {
@@ -23,7 +27,12 @@ function App() {
           <img style={{ width: '100%', maxHeight: 300, objectFit: 'contain' }} alt="cover" src={IMAGES.cover} />
         </Grid>
       </Grid>
+
       <ProjectsSection />
+
+      <ContactSection />
+
+      <FooterSection />
     </body>
   );
 }

@@ -8,7 +8,7 @@ import {
 import { PROJECTS, COLOR } from '../../constant';
 
 
-const Menu = ['ALL', 'APPLICATION', 'WEBSITE', 'GAME'];
+const Menu = ['ALL', 'WEBSITE', 'APPLICATION', 'GAME'];
 
 const ProjectsSection = () => {
   const spacing = 2;
@@ -28,14 +28,14 @@ const ProjectsSection = () => {
   return (
     <React.Fragment>
       <Grid container className={classes.root} style={{ backgroundColor: COLOR.whiteSmoke }}>
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ backgroundColor: COLOR.background }}>
           <TabMenu
             items={Menu}
             onChange={(value) => setSelectedType(Menu[value])}
           />
         </Grid>
 
-        <Grid item xs={12} style={{ paddingTop: 30 }}>
+        <Grid item xs={12} style={{ padding: 30 }}>
           <Grid container justify="center" spacing={spacing}>
             {projectLists.map((item, index) => (
               <Grid key={index} item>
