@@ -6,7 +6,6 @@ import {
   CardMedia,
   Typography,
   makeStyles,
-  Box,
 } from '@material-ui/core';
 import { COLOR } from '../../constant';
 

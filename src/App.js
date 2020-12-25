@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from "@material-ui/core/styles";
+import * as Scroll from 'react-scroll';
+import { Grid, makeStyles } from '@material-ui/core';
 import {
   ProjectsSection,
   ContactSection,
   FooterSection,
 } from './components/section';
 import { IMAGES, COLOR } from './constant';
+
+let Link = Scroll.Link;
+let Element = Scroll.Element;
+// let Events = Scroll.Events;
+// let scroll = Scroll.animateScroll;
+// let scrollSpy = Scroll.scrollSpy;
 
 function App() {
   const classes = styles();
@@ -21,14 +27,20 @@ function App() {
             <div><a className="weight-extraBold" style={{ color: COLOR.primary }}>I'm Fahsai</a>, Front-End </div>
             <div>Developer</div>
           </div>
-          <button className={classes.Button}>Get Started</button>
+          <Link activeClass="active" to="ProjectsSection" spy={true} smooth={true} offset={0} duration={500}>
+            <button className={classes.Button}>
+              Get Started
+            </button>
+          </Link>
         </Grid>
         <Grid item xs={12} md={5}>
           <img style={{ width: '100%', maxHeight: 300, objectFit: 'contain' }} alt="cover" src={IMAGES.cover} />
         </Grid>
       </Grid>
 
-      <ProjectsSection />
+      <Element name="ProjectsSection" className="element">
+        <ProjectsSection />
+      </Element>
 
       <ContactSection />
 
