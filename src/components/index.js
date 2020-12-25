@@ -1,1 +1,2 @@
-export { default as card } from "./card";
+export { ProjectCard } from "./card";
+export { TabMenu } from "./tab";

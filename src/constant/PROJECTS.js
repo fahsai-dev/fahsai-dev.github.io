@@ -28,16 +28,19 @@ const website = [
     subtitle: 'C# Microsoft Visual Studio 2010',
   },
   {
-    title: 'GAME Ying Ying Ying',
-    thumbnail: '/screenshot/web-yyygame4.png',
-    subtitle: 'GameSalad Creator',
-  },
-  {
     title: 'Search Video',
     thumbnail: '/screenshot/web-findyoutube.png',
     subtitle: 'React JS',
   },
 ]
 
+const game = [
+  {
+    title: 'GAME Ying Ying Ying',
+    thumbnail: '/screenshot/web-yyygame4.png',
+    subtitle: 'GameSalad Creator',
+  }
+]
 
-export default { app, website };
+
+export default { app, website, game };

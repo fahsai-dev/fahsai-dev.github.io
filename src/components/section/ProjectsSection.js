@@ -1,55 +1,61 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { ProjectCard } from '../card';
+import {
+  TabMenu,
+  ProjectCard
+} from '../';
 import { PROJECTS, COLOR } from '../../constant';
 
 
+const Menu = ['ALL', 'APPLICATION', 'WEBSITE', 'GAME'];
+
 const ProjectsSection = () => {
-  const spacing = 4;
+  const spacing = 2;
   const classes = useStyles();
 
-  const [selectedType, setSelectedType] = React.useState('all');
+  const [selectedType, setSelectedType] = React.useState('ALL');
   const [projectLists, setProjectLists] = React.useState([]);
 
 
   React.useEffect(() => {
-    if (selectedType === 'all') { setProjectLists([...PROJECTS.app, ...PROJECTS.website]); }
-    if (selectedType === 'app') { setProjectLists([...PROJECTS.app]); }
-    if (selectedType === 'web') { setProjectLists([...PROJECTS.website]); }
+    if (selectedType === 'ALL') { setProjectLists([...PROJECTS.app, ...PROJECTS.website, ...PROJECTS.game]); }
+    if (selectedType === 'APPLICATION') { setProjectLists([...PROJECTS.app]); }
+    if (selectedType === 'WEBSITE') { setProjectLists([...PROJECTS.website]); }
+    if (selectedType === 'GAME') { setProjectLists([...PROJECTS.game]); }
   }, [selectedType]);
 
   return (
-    <Grid container className={classes.root} spacing={spacing} style={{ backgroundColor: COLOR.whiteSmoke }}>
-      <Grid item xs={12}>
-        <div className="font-32 weight-extraBold" style={{ textAlign: 'center' }}>PROJETS</div>
-        <div className="font-18 weight-med" style={{ textAlign: 'center' }}>
-          <p>All</p>
-        </div>
-      </Grid>
+    <React.Fragment>
+      <Grid container className={classes.root} style={{ backgroundColor: COLOR.whiteSmoke }}>
+        <Grid item xs={12}>
+          <TabMenu
+            items={Menu}
+            onChange={(value) => setSelectedType(Menu[value])}
+          />
+        </Grid>
 
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={spacing}>
-          {projectLists.map((item, index) => (
-            <Grid key={index} item>
-              <ProjectCard
-                title={item.title}
-                subtitle={item.subtitle}
-                thumbnail={item.thumbnail}
-              />
-            </Grid>
-          ))}
+        <Grid item xs={12} style={{ paddingTop: 30 }}>
+          <Grid container justify="center" spacing={spacing}>
+            {projectLists.map((item, index) => (
+              <Grid key={index} item>
+                <ProjectCard
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  thumbnail={item.thumbnail}
+                />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </React.Fragment>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingTop: 32,
-    paddingBottom: 32,
   },
   paper: {
     height: 140,
