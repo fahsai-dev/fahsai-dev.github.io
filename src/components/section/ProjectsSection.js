@@ -35,7 +35,7 @@ const ProjectsSection = () => {
           />
         </Grid>
 
-        <Grid item xs={12} style={{ padding: 30 }}>
+        <Grid item xs={12} style={{ padding: 32 }}>
           <Grid container justify="center" spacing={spacing}>
             {projectLists.map((item, index) => (
               <Grid key={index} item>

@@ -37,7 +37,7 @@ const website = [
 const game = [
   {
     title: 'GAME Ying Ying Ying',
-    thumbnail: '/screenshot/web-yyygame4.png',
+    thumbnail: '/screenshot/web-yyygame.png',
     subtitle: 'GameSalad Creator',
   }
 ]
