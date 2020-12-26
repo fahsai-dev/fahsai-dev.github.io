@@ -19,7 +19,7 @@ const website = [
   },
   {
     title: 'GPS Besttech',
-    thumbnail: '/screenshot/web-besttech.png',
+    thumbnail: '/screenshot/web-besttech1.png',
     subtitle: 'Company Profile Website',
   },
   {
