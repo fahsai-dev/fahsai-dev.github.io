@@ -1,7 +1,7 @@
 const app = [
   {
     title: 'Chatbot',
-    thumbnail: '/screenshot/AppRhinoBot/app-rhinobot.png',
+    thumbnail: '/screenshot/AppRhinoBot/app-rhinobot1.png',
     subtitle: 'React Native Enterprise application',
   },
   {
@@ -39,7 +39,7 @@ const website = [
   },
   {
     title: 'Search Video',
-    thumbnail: '/screenshot/web-findyoutube.png',
+    thumbnail: '/screenshot/web-findyoutube1.png',
     subtitle: 'React JS',
   },
 ]
