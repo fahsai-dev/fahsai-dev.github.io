@@ -23,6 +23,11 @@ const website = [
     subtitle: 'Company Profile Website',
   },
   {
+    title: 'ModernTools',
+    thumbnail: '/screenshot/ModernTools/web-moderntools.png',
+    subtitle: 'Order Online Website',
+  },
+  {
     title: 'GPS Besttech',
     thumbnail: '/screenshot/web-besttech1.png',
     subtitle: 'Company Profile Website',
