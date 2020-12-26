@@ -1,5 +1,10 @@
 const app = [
   {
+    title: 'Chatbot',
+    thumbnail: '/screenshot/AppRhinoBot/app-rhinobot.png',
+    subtitle: 'React Native Enterprise application',
+  },
+  {
     title: 'College Advisor',
     thumbnail: '/screenshot/app-advisor.png',
     subtitle: 'Mobile App for iPhone',
