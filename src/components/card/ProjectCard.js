@@ -22,7 +22,7 @@ const MediaCard = (props) => {
           image={thumbnail}
           title={`ProjectThumbnail_${title}`}
         />
-        <CardContent style={{ minHeight: 80 }}>
+        <CardContent className={classes.card}>
           <Typography gutterBottom variant="h3" component="h3">
             {title}
           </Typography>
@@ -35,7 +35,7 @@ const MediaCard = (props) => {
   );
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 345,
     backgroundColor: '#424242',
@@ -43,11 +43,16 @@ const useStyles = makeStyles({
     borderRadius: 8,
     boxShadow: `2px 10px 14px rgb(33, 33, 33, 0.3)`,
   },
+  card: {
+    [theme.breakpoints.up('sm')]: {
+      minHeight: 110
+    },
+  },
   media: {
     height: 220,
     backgroundColor: COLOR.disable,
     objectFit: 'cover',
   },
-});
+}));
 
 export default MediaCard;

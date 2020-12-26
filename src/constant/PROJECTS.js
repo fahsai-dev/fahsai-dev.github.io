@@ -25,7 +25,7 @@ const website = [
   {
     title: 'Master Ad Dashboard',
     thumbnail: '/screenshot/web-dashboard3.png',
-    subtitle: 'Dashboard for overview of advertising production data',
+    subtitle: 'Dashboard overview of advertising production data',
   },
   {
     title: 'Buy Ticket',
