@@ -57,7 +57,7 @@ const ProjectsSection = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   tabmenu: {
     width: '100%',

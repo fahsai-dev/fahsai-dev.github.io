@@ -2,7 +2,7 @@ const app = [
   {
     title: 'College Advisor',
     thumbnail: '/screenshot/app-advisor.png',
-    subtitle: 'Mobile App on iPhone Link: https://youtu.be/i0fwzywEVvc',
+    subtitle: 'Mobile App for iPhone',
   },
 ]
 
@@ -11,6 +11,11 @@ const website = [
     title: 'Makro Click',
     thumbnail: '/screenshot/web-makro.png',
     subtitle: 'Order Online Website',
+  },
+  {
+    title: 'SKC.com',
+    thumbnail: '/screenshot/web-srinakornchaidotcom1.png',
+    subtitle: 'Company Profile Website',
   },
   {
     title: 'GPS Besttech',

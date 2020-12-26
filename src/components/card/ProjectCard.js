@@ -46,7 +46,7 @@ const useStyles = makeStyles({
   media: {
     height: 220,
     backgroundColor: COLOR.disable,
-    objectFit: 'contain',
+    objectFit: 'cover',
   },
 });
 
