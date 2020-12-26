@@ -1,6 +1,8 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import {
+  Grid,
+  makeStyles,
+} from '@material-ui/core';
 import {
   TabMenu,
   ProjectCard
@@ -28,12 +30,12 @@ const ProjectsSection = () => {
   return (
     <React.Fragment>
       <Grid container className={classes.root} style={{ backgroundColor: COLOR.whiteSmoke }}>
-        <Grid item xs={12} style={{ backgroundColor: COLOR.background }}>
+        <div className={classes.tabmenu}>
           <TabMenu
             items={Menu}
             onChange={(value) => setSelectedType(Menu[value])}
           />
-        </Grid>
+        </div>
 
         <Grid item xs={12} style={{ padding: 32 }}>
           <Grid container justify="center" spacing={spacing}>
@@ -56,6 +58,13 @@ const ProjectsSection = () => {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  tabmenu: {
+    width: '100%',
+    backgroundColor: COLOR.background,
+    position: 'sticky',
+    top: 0,
+    zIndex: 1,
   },
   paper: {
     height: 140,
