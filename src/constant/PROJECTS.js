@@ -5,6 +5,11 @@ const app = [
     subtitle: 'React Native Enterprise application',
   },
   {
+    title: 'SConnect',
+    thumbnail: '/screenshot/SConnect/app-sconnect.png',
+    subtitle: 'B2B E-Commerce Platform',
+  },
+  {
     title: 'ModernTools',
     thumbnail: '/screenshot/ModernTools/app-moderntools.png',
     subtitle: 'B2C E-Commerce Platform',
