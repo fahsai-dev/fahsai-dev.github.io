@@ -1,7 +1,7 @@
 const app = [
   {
     title: 'Chatbot',
-    thumbnail: '/screenshot/AppRhinoBot/app-rhinobot1.png',
+    thumbnail: '/screenshot/AppRhinoBot/app-rhinobot2.png',
     subtitle: 'React Native Enterprise application',
   },
   {
