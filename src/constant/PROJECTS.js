@@ -28,6 +28,11 @@ const website = [
     subtitle: 'Order Online Website',
   },
   {
+    title: 'Chatbot',
+    thumbnail: '/screenshot/WebRhinoBot/web-rhinobot.png',
+    subtitle: 'Chatbot Website',
+  },
+  {
     title: 'SKC.com',
     thumbnail: '/screenshot/web-srinakornchaidotcom1.png',
     subtitle: 'Company Profile Website',
