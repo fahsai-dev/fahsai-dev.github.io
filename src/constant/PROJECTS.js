@@ -43,6 +43,11 @@ const website = [
     subtitle: 'Order Online Website',
   },
   {
+    title: 'Dongcheng',
+    thumbnail: '/screenshot/Dongchength/web-dongcheng.png',
+    subtitle: 'Company Profile Website',
+  },
+  {
     title: 'GPS Besttech',
     thumbnail: '/screenshot/web-besttech1.png',
     subtitle: 'Company Profile Website',

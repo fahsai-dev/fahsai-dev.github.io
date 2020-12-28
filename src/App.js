@@ -24,7 +24,9 @@ function App() {
         <Grid item xs={12} md={7}>
           <div className="intro-text">
             <div>Hello</div>
-            <div><a className="weight-extraBold" style={{ color: COLOR.primary }}>I'm Fahsai</a>, Front-End </div>
+            <div>
+              <span className="weight-extraBold" style={{ color: COLOR.primary }}>I'm Fahsai</span>, Front-End
+            </div>
             <div>Developer</div>
           </div>
           <Link activeClass="active" to="ProjectsSection" spy={true} smooth={true} offset={0} duration={500}>
