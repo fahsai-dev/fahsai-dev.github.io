@@ -20,10 +20,17 @@ const ContactSection = () => {
   const [msg, setMsg] = React.useState('');
   const [error, setError] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [alert, setAlert] = React.useState(null);
 
   const validateEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+  }
+
+  const clearValue = (email) => {
+    setName('');
+    setEmail('');
+    setMsg('');
   }
 
   const submit = () => {
@@ -41,13 +48,17 @@ const ContactSection = () => {
     };
     emailjs.send(SERVICEID, TEMPLATEID, templateParams, USERID)
       .then((response) => {
+        setAlert(true);
         console.log('SUCCESS!', response.status, response.text);
       })
       .catch((err) => {
+        setAlert(false);
         console.log('FAILED...', err);
       })
       .finally(() => {
+        clearValue();
         setTimeout(() => { setIsLoading(false); }, 2000);
+        setTimeout(() => { setAlert(null); }, 5000);
       });
   }
 
@@ -61,9 +72,18 @@ const ContactSection = () => {
           <Grid item xs={12} md={7}>
             <h2>Send me an email</h2>
           </Grid>
-          {/* <Grid item xs={12} md={7}>
-            <Alert severity="success">This is a success alert — check it out!</Alert>
-          </Grid> */}
+          <Grid item xs={12} md={7}>
+            {
+              alert === true && (
+                <Alert severity="success">Send email success.</Alert>
+              )
+            }
+            {
+              alert === false && (
+                <Alert severity="error">Error — please try again later!</Alert>
+              )
+            }
+          </Grid>
           <Grid item xs={12} md={7}>
             <InputOutlined
               label="Name"
