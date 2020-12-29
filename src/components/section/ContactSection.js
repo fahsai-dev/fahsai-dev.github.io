@@ -72,18 +72,22 @@ const ContactSection = () => {
           <Grid item xs={12} md={7}>
             <h2>Send me an email</h2>
           </Grid>
-          <Grid item xs={12} md={7}>
-            {
-              alert === true && (
+
+          {
+            alert === true && (
+              <Grid item xs={12} md={7}>
                 <Alert severity="success">Send email success.</Alert>
-              )
-            }
-            {
-              alert === false && (
+              </Grid>
+            )
+          }
+          {
+            alert === false && (
+              <Grid item xs={12} md={7}>
                 <Alert severity="error">Error — please try again later!</Alert>
-              )
-            }
-          </Grid>
+              </Grid>
+            )
+          }
+
           <Grid item xs={12} md={7}>
             <InputOutlined
               label="Name"
