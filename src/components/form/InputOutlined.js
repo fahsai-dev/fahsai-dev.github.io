@@ -1,12 +1,13 @@
 import React from 'react';
 import {
   TextField,
+  Typography,
+  makeStyles
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import { COLOR } from '../../constant';
 
 const InputOutlined = (props) => {
-  const { label, useMultiline, onChange, ...rest } = props;
+  const { label, useMultiline, onChange, validText, isError, ...rest } = props;
   const classes = useStyles();
 
   return (
@@ -22,7 +23,13 @@ const InputOutlined = (props) => {
         onChange={(event) => onChange && onChange(event.target.value)}
         {...rest}
       />
-
+      {
+        isError && (
+          <Typography variant={"h5"} style={{ color: COLOR.error }}>
+            {validText || "Error"}
+          </Typography>
+        )
+      }
     </React.Fragment>
   );
 }

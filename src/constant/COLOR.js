@@ -5,6 +5,7 @@ const color = {
   white: "#ffff",
   whiteSmoke: "#f9f9f9",
   disable: "#dfdfdf",
+  error: "#F01E2F",
 };
 
 export default color;
