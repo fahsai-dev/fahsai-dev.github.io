@@ -30,13 +30,13 @@ const TabMenu = (props) => {
         onChange={handleChange}
         variant="scrollable"
         scrollButtons="auto"
-        disableRipple
         TabIndicatorProps={{ style: { height: "3px", backgroundColor: COLOR.primary, borderRadius: 8 } }}
         className={classes.tabs}
       >
         {
           items && items.map((menu, index) => (
             <Tab
+              key={`${menu}_${index}`}
               classes={{ root: classes.item, selected: classes.selected }}
               label={menu}
               {...a11yProps(index)}

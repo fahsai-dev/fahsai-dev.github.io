@@ -8,6 +8,8 @@ import {
   FooterSection,
 } from './components/section';
 import { IMAGES, COLOR } from './constant';
+import { logPageView } from './helpers/googleAnalytics';
+
 
 let Link = Scroll.Link;
 let Element = Scroll.Element;
@@ -17,6 +19,10 @@ let Element = Scroll.Element;
 
 function App() {
   const classes = styles();
+
+  React.useEffect(() => {
+    logPageView();
+  }, []);
 
   return (
     <body style={{ height: '100%' }}>
