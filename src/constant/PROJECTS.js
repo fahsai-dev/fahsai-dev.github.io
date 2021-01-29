@@ -5,6 +5,21 @@ const app = [
     subtitle: 'App CRM',
   },
   {
+    title: 'SalesHub',
+    thumbnail: '/screenshot/Saleshub/saleshub-cover.png',
+    subtitle: 'App used in corporate communication',
+  },
+  {
+    title: 'LifeLink (Service) for Tablet',
+    thumbnail: '/screenshot/Lifelink-Tablet/lifelinktablet3.png',
+    subtitle: 'App Tablet',
+  },
+  {
+    title: 'LifeLink for Mobile',
+    thumbnail: '/screenshot/Lifelink-Mobile/lifelinkmobile-cover.png',
+    subtitle: 'App sends you news notifications',
+  },
+  {
     title: 'Chatbot',
     thumbnail: '/screenshot/AppRhinoBot/app-rhinobot2.png',
     subtitle: 'React Native Enterprise application',
