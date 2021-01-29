@@ -53,6 +53,11 @@ const website = [
     subtitle: 'Chatbot Website',
   },
   {
+    title: 'CheckQdi',
+    thumbnail: '/screenshot/Checkqdi/checkqdi-cover.png',
+    subtitle: 'Website for booking director',
+  },
+  {
     title: 'SKC.com',
     thumbnail: '/screenshot/web-srinakornchaidotcom1.png',
     subtitle: 'Company Profile Website',
